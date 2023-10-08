@@ -33,4 +33,5 @@
 
 .container{
     background: var(--color-bg);
+    color: var(--color-white);
 }
