@@ -11,7 +11,7 @@
 }
 
 :root{
-    --color-primary: #6c63ff;
+    --color-primary: #15514d;
     --color-success: #00bf8e;
     --color-warning: #f7c94b;
     --color-danger: #f75842;
@@ -19,10 +19,10 @@
     --color-white: #fff;
     --color-black: #000;
     /*Background color*/
-    --color-bg:#004643;
-    --color-bg1: #2e3267;
-    --color-bg2: #424890;
-    
+    --color-bg:#0b3e3b;
+    --color-bg1: #15514d;
+    --color-bg2:#11302e;
+
     --container-width-lg: 80%;
     --container-width-md: 90%;
     --container-width-sm: 94%;
@@ -113,9 +113,9 @@ nav{
     background:var(--color-bg2);
     width: 100vw;
     height: 4rem;
-position: fixed;
-top: 0;
-z-index: 11;
+    position: fixed;
+    top: 0;
+    z-index: 11;
 
 }
 

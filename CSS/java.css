@@ -5,16 +5,17 @@
 }
 
 :root{
-    --color-primary: #6c63ff;
+    --color-primary: #15514d;
     --color-success: #00bf8e;
     --color-warning: #f7c94b;
     --color-danger: #f75842;
     --color-danger-variant: rgba(247, 88, 66, 0.4);
     --color-white: #fff;
     --color-black: #000;
-    --color-bg: #1f2641;
-    --color-bg1: #2e3267;
-    --color-bg2: #424890;
+    --color-bg:#0b3e3b;
+    --color-bg1: #15514d;
+    --color-bg2:#11302e;
+
     
     --container-width-lg: 80%;
     --container-width-md: 90%;
