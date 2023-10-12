@@ -11,7 +11,7 @@
 }
 
 :root{
-    --color-primary: #15514d;
+    --color-primary: #380b3e;
     --color-success: #00bf8e;
     --color-warning: #f7c94b;
     --color-danger: #f75842;
@@ -19,9 +19,9 @@
     --color-white: #fff;
     --color-black: #000;
     /*Background color*/
-    --color-bg:#0b3e3b;
-    --color-bg1: #15514d;
-    --color-bg2:#11302e;
+    --color-bg:#380b3e;
+    --color-bg1: #561d5e;
+    --color-bg2:#b479bc;
 
     --container-width-lg: 80%;
     --container-width-md: 90%;
