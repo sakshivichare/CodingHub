@@ -14,7 +14,7 @@
     align-items: center;
     min-height:100vh;
     /*background-color: rgb(252, 174, 223);*/
-    background: url(../image/heartbeat.png);
+    background: url(../Image/heartbeat.png);
     backdrop-filter: blur(3px);
     background-size: cover;
     background-position: center;
