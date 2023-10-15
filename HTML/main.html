@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let'sSolveit</title>
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+<body>
+    <header>
+        <h2 class="logo">Let'sSolveit</h2>
+        <nav class="navigationbar">
+            <a href="#home">Home</a>
+            <a href="#Book">Book</a>
+            <a href="#Notes">Notes</a>
+            <a href="#Test">Test</a>
+            <a href="#Contact">Contact</a>
+            <button class="loginbtn-popup">Login</button>
+        </nav>
+    </header>
+
+    <!-- Login form -->
+    <div class="wrapper">
+        <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+        </span>
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input id="log_email" type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input id="log_pass" type="password" required>
+                    <label>Password</label>
+                </div>
+                
+                <button type="submit" class="btn" onclick="loginForm()">Login</button>
+                <div class="Login-register">
+                    <p>Don't have an account? <a href="#" class="Register-link" style="color: black;">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Registration form -->
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input id="reg_email" type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input id="reg_pass" type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Agree to the terms & conditions</label>
+                </div>
+                <button type="submit" class="btn" onclick="registerForm()">Register</button>
+                <div class="Login-register">
+                    <p>Already have an account? <a href="#" class="login-link"  style="color:black;">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <script>
+       
+        const firebaseConfig = {
+            apiKey: "AIzaSyB9Bg5xdfYVmWz-biTweWNNuYzbr-xrT8I",
+            authDomain: "let-ssolveit-auth.firebaseapp.com",
+            projectId: "let-ssolveit-auth",
+            storageBucket: "let-ssolveit-auth.appspot.com",
+            messagingSenderId: "809202793702",
+            appId: "1:809202793702:web:2358a506d48554a4234f27",
+            measurementId: "G-VEMYRD269P"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+
+        function registerForm() {
+            const email = document.getElementById("reg_email").value;
+            const password = document.getElementById("reg_pass").value;
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    
+                    alert("Registered Succesfully");
+                })
+                .catch((error) => {
+                 
+                 alert("Registration error");
+                });
+        }
+
+       
+        function loginForm() {
+            const email = document.getElementById("log_email").value;
+            const password = document.getElementById("log_pass").value;
+
+            auth.signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                   
+                    alert("Logged in Succesfully");
+                    window.location.replace("index.html");
+                })
+                .catch((error) => {
+                  
+                    alert("Login error");
+                });
+        }
+    </script>
+
+
+    <script src="../js/login.js" defer></script>
+
+   
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+
+    
+    
+</body>
+</html>
