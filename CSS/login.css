@@ -14,8 +14,8 @@
     align-items: center;
     min-height:100vh;
     /*background-color: rgb(252, 174, 223);*/
-    background: url(../Image/heartbeat.png);
-    backdrop-filter: blur(3px);
+    background: url(../Image/bg.png);
+    backdrop-filter: blur(1%);
     background-size: cover;
     background-position: center;
 
@@ -38,6 +38,7 @@
   .logo {
     font-size: 2rem;
     color:rgb(243, 241, 241);
+    background: url(../Image/logo-removebg-preview\ \(1\).png);
     user-select:none;
     position:left;
     padding-left:20px ;
